@@ -18,7 +18,7 @@
       </div>
       <ul class="nav">
         <li class="nav-item">
-          <a class="nav-link" href="index.php">Return to Genre List</a>
+          <a class="nav-link" href="/">Return to Genre List</a>
         </li>
       </ul>
       <div class="navbar-text">James Tyner | ITP 405</div>
