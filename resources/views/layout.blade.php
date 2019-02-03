@@ -7,6 +7,21 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
   </head>
   <body>
+    @section('nav')
+      <nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-dark">
+        <a class="navbar-brand" href="/">Music</a>
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item"><a class="nav-link" href="/genres">Genres</a></li>
+          <li class="nav-item"><a class="nav-link" href="/tracks">Tracks</a></li>
+        </ul>
+
+        @hasSection('buttons')
+          @yield('buttons')
+        @endif
+
+        <div class="navbar-text pl-3">James Tyner | ITP 405</div>
+      </nav>
+    @show
 
     @yield('main')
 
