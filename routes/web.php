@@ -11,8 +11,14 @@
 |
 */
 
-// Default to the genres view (like in the old assignment)
-Route::get('/', 'GenresController@index');
+Route::get('/', function(){
+  return view('home');
+});
 
-// For the /tracks URI, use the tracks controller to get to that view
-Route::get('/tracks', 'TracksController@tracks');
+Route::get('/genres', 'GenresController@index');
+Route::get('/genres/{id}/edit', 'GenresController@edit');
+Route::post('/genres', 'GenresController@store');
+
+Route::get('/tracks', 'TracksController@index');
+Route::get('/tracks/new', 'TracksController@create');
+Route::post('/tracks', 'TracksController@store');
