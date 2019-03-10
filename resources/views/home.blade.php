@@ -14,6 +14,7 @@
   <ul class="list-group">
       <a class="list-group-item" href="/genres">Genres</a>
       <a class="list-group-item" href="/tracks">Tracks</a>
+      <a class="list-group-item" href="/docs">Docs</a>
   </ul>
 </div>
 
