@@ -22,3 +22,7 @@ Route::post('/genres', 'GenresController@store');
 Route::get('/tracks', 'TracksController@index');
 Route::get('/tracks/new', 'TracksController@create');
 Route::post('/tracks', 'TracksController@store');
+
+Route::get("/docs", function(){
+  return view('docs');
+});

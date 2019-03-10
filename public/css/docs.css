@@ -1,0 +1,14 @@
+[contentEditable=true]:empty:not(:focus)::before {
+  content:"Start typing…";
+  color:gray;
+  font-style:italic;
+}
+
+[contenteditable]:focus {
+    outline: 0px solid transparent;
+}
+
+#doc-textbox {
+  min-height:50vh;
+  line-height:1.5em
+}
