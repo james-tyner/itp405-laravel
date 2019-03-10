@@ -10,10 +10,18 @@ connection.onmessage = function(event){
   }
 }
 
-document.querySelector("#doc-textbox").addEventListener("input", function(event){
-  event.preventDefault(); //prevent page refresh for form submission
+var sendTimeout;
 
-  let contents = document.querySelector("#doc-textbox").innerText;
-  connection.send(contents);
-  console.log(contents);
-})
+document.querySelector("#doc-textbox").addEventListener("input", function(event){
+  event.preventDefault();
+
+  document.querySelector("#status").innerText = "Saving…";
+
+  if (sendTimeout) clearTimeout(sendTimeout);
+
+  sendTimeout = setTimeout(function () {
+    let contents = document.querySelector("#doc-textbox").innerText;
+    connection.send(contents);
+    document.querySelector("#status").innerText = "Saved.";
+  }, 750);
+});
