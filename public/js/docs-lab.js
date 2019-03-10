@@ -1,4 +1,4 @@
-let connection = new WebSocket("ws://james-tyner-itp405-node.herokuapp.com/");
+let connection = new WebSocket("wss://james-tyner-itp405-node.herokuapp.com/");
 
 connection.onerror = function(){
   console.log("Failed to connect to server");
